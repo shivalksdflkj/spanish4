@@ -1,0 +1,55 @@
+<html>
+<head>
+<title></title>
+<style>
+	.card{
+		width:300px;
+		height:300px;
+		border:0px solid black;
+		margin:-150px;
+		left:50%;
+		top:50%;
+		transform:perspective(500px);
+		position:absolute;
+		}
+	.content{
+		width:100%;
+		height:100%;
+		position:absolute;
+		transform-style:preserve-3d;
+		transition:transform 1s;
+		}
+	.front,
+	.back{
+		width:100%;
+		height:100%;
+		position:absolute;
+		background:black;
+		color:white;
+		font-size:60px;
+		text-align:center;
+		line-height:300px;
+		backface-visibility:hidden;
+		border-radius:20px;
+		font-family:Copperplate Gothic Bold;
+		}
+	.back{
+		font-family:Copperplate Gothic Bold;
+		background:white;
+		color:black;
+		transform:rotateY(180deg);
+		}
+	.card:hover .content{
+		transform:rotateY(180deg);
+		}
+</style>
+</head>
+<body bgcolor="pink">
+	<div class="card">
+	<div class="content">
+	<div class="front">Black</div>
+	<div class="back">White</div>
+	</div>
+	</div>
+</body>
+</html>
